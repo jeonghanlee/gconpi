@@ -30,3 +30,27 @@
 
 # Debug files
 *.dSYM/
+
+
+#EPICS related files
+.svn
+*.svn-base
+*~
+*Common
+dbd
+include
+doc
+html
+db
+adl
+alh
+cfg
+edl
+lib
+envPaths
+#*
+*#
+.#*
+*log.*
+bin
+O.*
