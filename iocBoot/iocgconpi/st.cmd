@@ -1,9 +1,10 @@
-#!../../bin/linux-x86_64/gconpi
+#!../../bin/linux-arm/gconpi
 
 ## You may have to change gconpi to something else
 ## everywhere it appears in this file
 
 < envPaths
+
 
 epicsEnvSet("STREAM_PROTOCOL_PATH", ".:${TOP}/db")
 epicsEnvSet("TTY","$(TTY=/dev/ttyAMA0)")
@@ -27,7 +28,7 @@ asynSetOption("CGONPI", -1, "stop", "1")
 asynSetOption("CGONPI", -1, "clocal", "Y")
 asynSetOption("CGONPI", -1, "crtscts", "N")
 
-dbLoadRecords("db/cgonpi-stream.db", "SYSDEV=RFQ:VAC1:,PORT=XGS600,ID=00")
+dbLoadRecords("db/gconpi-stream.db", "SYSDEV=RPI:RAD1:,PORT=CGONPI")
 
 
 
