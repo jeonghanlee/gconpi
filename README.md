@@ -57,6 +57,8 @@ Connection
 Battery +3V       ---------------   3.3 V PIN 1
 ```
 
+### Photo
+![Connection Example](pi_and_gc.png)
 
 ### References
 * http://mightyohm.com/blog/2012/02/tutorial-geiger-counter-data-logging/#more-4695
