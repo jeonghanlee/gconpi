@@ -6,9 +6,33 @@
 # - Author  : Jeong Han Lee    
 # - email   : jhlee@ibs.re.kr
 # - license : EPICS open license
-Terminator = CR;
+
+# There is no information on Termintor of mightyohm Geiger counter.
+# So, I test the following cases, and decide to use CR LF as the Terminator
+# 
+#
+# - No terminator and Only LF
+# RPI:RAD1:CPS                   2015-07-29 13:59:40.711762 0 CALC INVALID
+# RPI:RAD1:CPM                   <undefined> 20 UDF INVALID
+# RPI:RAD1:uSv                   <undefined> 0.11 UDF INVALID
+# RPI:RAD1:CPS                   2015-07-29 13:59:43.698898 1 CALC INVALID
+# RPI:RAD1:CPS                   2015-07-29 13:59:44.694614 0 CALC INVALID
+
+# - Only CR
+# From time to time, 
+# RPI:RAD1:CPS                   2015-07-29 13:44:13.298529 2  
+# RPI:RAD1:CPS                   2015-07-29 13:44:14.298365 2 CALC INVALID
+# RPI:RAD1:CPM                   2015-07-29 13:44:36.621662 31  
+# RPI:RAD1:CPS                   2015-07-29 13:44:36.621739 1  
+
+# - CR LF
+# 
+# No issue I found during 3 hours
+#
+
+Terminator   = CR LF;
 ReplyTimeout = 1000;
-ReadTimeout = 300;
+ReadTimeout  = 300;
 
 ## mightyohm.com Geiger Counter 1.00
 ## http://mightyohm.com/geiger
@@ -21,28 +45,30 @@ ReadTimeout = 300;
 
 read_CPS
 {
-    in "CPS,%f, CPM, %*f, uSv/hr, %*f, %*s";
+    in "CPS, %f, CPM, %*f, uSv/hr, %*f, %*s";
     @mismatch {
-	in "*s";
-#        in "%(\$2)s";
+#	in "%s";
+        in "%(\$1)s";
+	
     }
+ 
 }
 
 
 read_CPM
 {
-    in "CPS,%*f, CPM, %f, uSv/hr, %*f, %*s";
+    in "CPS, %*f, CPM, %f, uSv/hr, %*f, %*s";
 }
 
 
 
 read_uSv
 {
-    in "CPS,%*f, CPM, %*f, uSv/hr, %f, %*s";
+    in "CPS, %*f, CPM, %*f, uSv/hr, %f, %*s";
 }
 
 
 read_avgmode
 {
-    in "CPS,%*f, CPM, %*f, uSv/hr, %*f, %s";
+    in "CPS, %*f, CPM, %*f, uSv/hr, %*f, %s";
 }
