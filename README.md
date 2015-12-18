@@ -12,7 +12,14 @@
 
 ### Data Structure 
 
-The serial connection from pi through minicom, 
+* In order to see the data quickly, 
+
+```bash 
+cat < /dev/ttyAMA0
+```
+
+
+* The serial connection from pi through minicom (need some tuning for options), 
 
 ```bash
 minicom -b 9600 -o -D /dev/ttyAMA0
