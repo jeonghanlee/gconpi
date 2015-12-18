@@ -73,5 +73,9 @@ Battery +3V       ---------------   3.3 V PIN 1
 * https://wiki-ext.aps.anl.gov/epics/index.php/Main_Page
 
 
+### Pi setup 
+* If one may enable the serial console, the group id will be tty instead of dialout. Even if root, the connection is disconnected after few seconds. So please turn off this option via rasp-config
+
+
 ### License
 * http://www.aps.anl.gov/epics/license/open.php
