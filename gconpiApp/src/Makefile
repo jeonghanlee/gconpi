@@ -17,6 +17,7 @@ gconpi_DBD += base.dbd
 
 # Include dbd files from all support applications:
 #gconpi_DBD += xxx.dbd
+gconpi_DBD += devIocStats.dbd
 gconpi_DBD += stream.dbd
 gconpi_DBD += asyn.dbd
 gconpi_DBD += drvAsynSerialPort.dbd
@@ -24,6 +25,7 @@ gconpi_DBD += drvAsynSerialPort.dbd
 # Add all the support libraries needed by this IOC
 #gconpi_LIBS += xxx
 gconpi_LIBS += stream asyn
+gconpi_LIBS += devIocStats
 
 
 # gconpi_registerRecordDeviceDriver.cpp derives from gconpi.dbd

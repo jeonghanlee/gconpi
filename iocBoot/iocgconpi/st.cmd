@@ -19,6 +19,8 @@ gconpi_registerRecordDeviceDriver pdbbase
 ## Load record instances
 #dbLoadRecords("db/xxx.db","user=jhleeHost")
 
+dbLoadRecords("db/iocAdminSoft.db", "IOC=gconpi")
+
 drvAsynSerialPortConfigure("CGONPI", "$(TTY)", 0,0,0)
 
 asynSetOption("CGONPI", -1, "baud", "9600")
