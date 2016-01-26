@@ -34,4 +34,4 @@ EPICS_BASE=${EPICS_PATH}/base
 
 ASYN=${EPICS_SYNAPPS}/asyn-4-26
 STREAM=${EPICS_SYNAPPS}/stream-2-6a
-devIocStats=${EPICS_SYNAPPS}/devIocStats-3-1-13
+devIocStats=${EPICS_PATH}/epicsLibs/iocStats
