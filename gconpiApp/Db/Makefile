@@ -14,15 +14,7 @@ include $(TOP)/configure/CONFIG
 
 DB += gconpi-stream.db
 DB_INSTALLS += $(TOP)/gconpiApp/Db/gconpi.proto
-DB_INSTALLS += $(devIocStats)/db/access.db
-DB_INSTALLS += $(devIocStats)/db/iocGeneralTime.db
-DB_INSTALLS += $(devIocStats)/db/iocScanMonSum.db
-DB_INSTALLS += $(devIocStats)/db/iocCluster.db
-DB_INSTALLS += $(devIocStats)/db/iocAdminScanMon.db
-DB_INSTALLS += $(devIocStats)/db/ioc.db
 DB_INSTALLS += $(devIocStats)/db/iocAdminSoft.db
-DB_INSTALLS += $(devIocStats)/db/iocEnvVar.db
-DB_INSTALLS += $(devIocStats)/db/iocScanMon.db
 
 
 #----------------------------------------------------

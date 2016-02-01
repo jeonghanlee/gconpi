@@ -1,0 +1,42 @@
+#!../../bin/linux-arm/gconpi
+
+## You may have to change gconpi to something else
+## everywhere it appears in this file
+
+< envPaths
+
+
+epicsEnvSet("STREAM_PROTOCOL_PATH", ".:${TOP}/db")
+epicsEnvSet("TTY","$(TTY=/dev/ttyAMA0)")
+
+
+cd "${TOP}"
+
+## Register all support components
+dbLoadDatabase "dbd/gconpi.dbd"
+gconpi_registerRecordDeviceDriver pdbbase
+
+## Load record instances
+#dbLoadRecords("db/xxx.db","user=jhleeHost")
+
+dbLoadRecords("db/iocAdminSoft.db", "IOC=TEST")
+
+drvAsynSerialPortConfigure("CGONPI", "$(TTY)", 0,0,0)
+
+asynSetOption("CGONPI", -1, "baud", "9600")
+asynSetOption("CGONPI", -1, "bits", "8")
+asynSetOption("CGONPI", -1, "parity", "none")
+asynSetOption("CGONPI", -1, "stop", "1")
+asynSetOption("CGONPI", -1, "clocal", "Y")
+asynSetOption("CGONPI", -1, "crtscts", "N")
+
+dbLoadRecords("db/gconpi-stream.db", "SYSDEV=TEST:,PORT=CGONPI")
+
+
+
+
+cd "${TOP}/iocBoot/${IOC}"
+iocInit
+
+## Start any sequence programs
+#seq sncxxx,"user=jhleeHost"
