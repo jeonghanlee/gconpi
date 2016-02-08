@@ -1,4 +1,4 @@
-#!../../bin/linux-arm/gconpi
+#!../../bin/linux-x86_64/gconpi
 
 ## You may have to change gconpi to something else
 ## everywhere it appears in this file

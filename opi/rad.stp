@@ -24,31 +24,39 @@ Strip.Curve.0.Name            RPI:RAD1:CPM
 Strip.Curve.1.Name            RPI:RAD1:CPS
 Strip.Curve.2.Name            RPI:RAD1:uSv
 Strip.Curve.3.Name            RPI:IOC:SYS_CPU_LOAD
+Strip.Curve.4.Name            RPI:IOC:SYS_ZONE_TEMP
 Strip.Curve.0.Units           CPM
 Strip.Curve.1.Units           CPS
 Strip.Curve.2.Units           uSv/hr
 Strip.Curve.3.Units           %
+Strip.Curve.4.Units           mCelsiu
 Strip.Curve.0.Comment         Geiger Counter Counter Per Min
 Strip.Curve.1.Comment         Geiger Counter Counter Per Secoud
 Strip.Curve.2.Comment         Geiger Counter uSV/hr
 Strip.Curve.3.Comment         System CPU Load
+Strip.Curve.4.Comment         System Thermal Zone0 Temperature
 Strip.Curve.0.Precision       0
 Strip.Curve.1.Precision       0
 Strip.Curve.2.Precision       0
 Strip.Curve.3.Precision       1
+Strip.Curve.4.Precision       0
 Strip.Curve.0.Min              0
 Strip.Curve.1.Min              0
 Strip.Curve.2.Min              0
 Strip.Curve.3.Min              0.0
+Strip.Curve.4.Min              0
 Strip.Curve.0.Max              50
 Strip.Curve.1.Max              10
 Strip.Curve.2.Max              1
 Strip.Curve.3.Max              100.0
+Strip.Curve.4.Max              100000
 Strip.Curve.0.Scale           0
 Strip.Curve.1.Scale           0
 Strip.Curve.2.Scale           0
 Strip.Curve.3.Scale           0
+Strip.Curve.4.Scale           0
 Strip.Curve.0.PlotStatus      1
 Strip.Curve.1.PlotStatus      1
 Strip.Curve.2.PlotStatus      1
 Strip.Curve.3.PlotStatus      1
+Strip.Curve.4.PlotStatus      1
