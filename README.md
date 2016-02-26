@@ -5,7 +5,7 @@
 * EPICS 3.14.12.5
 * ASYN-4-26
 * STREAM-2-6a
-* devIocStats 3.1.13
+* devIocStats 3.1.13 or https://github.com/jeonghanlee/iocStats (one can have one more PV - temperture monitoring of thermal zone 0) 
 * Raspberry Pi 2
 * mightyohm.com Geiger Counter v1.0
 
