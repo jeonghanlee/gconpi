@@ -1,10 +1,28 @@
 #
-# EPICS STREAM DB with STREAM for 
-# mightyohm.com Geiger Counter
+#  Copyright (c) Jeong Han Lee
 #
-# - Author  : Jeong Han Lee    
-# - email   : jhlee@ibs.re.kr
-# - license : EPICS open license
+#  This gconpi.proto is free software: you can redistribute
+#  it and/or modify it under the terms of the GNU General Public License
+#  as published by the Free Software Foundation, either version 2 of the
+#  License, or any newer version.
+#
+#  This program is distributed in the hope that it will be useful, but WITHOUT
+#  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+#  FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+#  more details.
+#
+#  You should have received a copy of the GNU General Public License along with
+#  this program. If not, see https://www.gnu.org/licenses/gpl-2.0.txt
+#
+#
+#  author  : Jeong Han Lee
+#  email   : jeonghan.lee@gmail.com
+#  date    : Tuesday, July 28 18:58:10 KST 2015
+#  version : 0.2
+# 
+#  EPICS STREAM DB with STREAM for mightyohm.com Geiger Counter
+#  https://github.com/jeonghanlee/gconpi
+#
 # 
 #  - 0.1       Tuesday, July 28 18:58:10 KST 2015, jhlee
 # Software Revision
@@ -12,7 +30,6 @@
 #              Try to understand CPS_MSG and others, 
 #              Add EGU and DESC to CPS,CPM,uSv,AvgMode records
 #
-##############################################################
 
 
 

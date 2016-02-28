@@ -1,11 +1,31 @@
-# 
-# mightyohm.com Geiger Counter Stream protocol file
 #
-# Tuesday, July 28 18:42:43 KST 2015, jhlee
+#  Copyright (c) Jeong Han Lee
 #
-# - Author  : Jeong Han Lee    
-# - email   : jhlee@ibs.re.kr
-# - license : EPICS open license
+#  This gconpi.proto is free software: you can redistribute
+#  it and/or modify it under the terms of the GNU General Public License
+#  as published by the Free Software Foundation, either version 2 of the
+#  License, or any newer version.
+#
+#  This program is distributed in the hope that it will be useful, but WITHOUT
+#  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+#  FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+#  more details.
+#
+#  You should have received a copy of the GNU General Public License along with
+#  this program. If not, see https://www.gnu.org/licenses/gpl-2.0.txt
+#
+#
+#  author  : Jeong Han Lee
+#  email   : jeonghan.lee@gmail.com
+#  date    : Tuesday, July 28 18:42:43 KST 2015
+#  version : 0.1
+#
+#  mightyohm.com Geiger Counter Stream protocol file
+#
+#  https://github.com/jeonghanlee/gconpi
+#
+
+
 
 # There is no information on Termintor of mightyohm Geiger counter.
 # So, I test the following cases, and decide to use CR LF as the Terminator

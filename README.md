@@ -79,4 +79,4 @@ Battery +3V       ---------------   3.3 V PIN 1
 
 
 ### License
-* http://www.aps.anl.gov/epics/license/open.php
+* https://www.gnu.org/licenses/gpl-2.0.txt 
