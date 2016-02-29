@@ -21,6 +21,8 @@ gconpi_DBD += devIocStats.dbd
 gconpi_DBD += stream.dbd
 gconpi_DBD += asyn.dbd
 gconpi_DBD += drvAsynSerialPort.dbd
+gconpi_DBD += drvAsynIPPort.dbd
+
 
 # Add all the support libraries needed by this IOC
 #gconpi_LIBS += xxx

@@ -1,0 +1,28 @@
+#!../../bin/linux-x86_64/gconpi
+
+## You may have to change gconpi to something else
+## everywhere it appears in this file
+
+< envPaths
+
+
+epicsEnvSet("STREAM_PROTOCOL_PATH", ".:${TOP}/db")
+
+cd "${TOP}"
+
+## Register all support components
+dbLoadDatabase "dbd/gconpi.dbd"
+gconpi_registerRecordDeviceDriver pdbbase
+
+## Load record instances
+
+drvAsynIPPortConfigure("CGONPI", "127.0.0.1:9999", 0, 0, 0)
+
+dbLoadRecords("db/iocAdminSoft.db",  "IOC=KAM:IOC")
+dbLoadRecords("db/gconpi-stream.db", "SYSDEV=KAM:RAD1:,PORT=CGONPI")
+
+cd "${TOP}/iocBoot/${IOC}"
+iocInit
+
+## Start any sequence programs
+#seq sncxxx,"user=jhleeHost"
