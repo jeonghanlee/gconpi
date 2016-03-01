@@ -37,6 +37,10 @@ CPS, 1, CPM, 3, uSv/hr, 0.01, SLOW
 ```
 The first two lines comes from the Geiger Counter when the power switch is on always. So it must be the invalid data when one try to read in EPICS IOC.
 
+### Simulator
+* For a simple simulator in order to see how this IOC works, one can use Kameleon as a simulated geiger counter and st.cmd.kameleon.
+  https://bitbucket.org/europeanspallationsource/kameleon
+
 ### Pin Connection
 
 #### Serial Connection
