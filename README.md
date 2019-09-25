@@ -1,4 +1,5 @@
-#gconpi
+gconpi (Geiger Counter on Pi)
+===
 
 ### Working Environment or Requirements
 
