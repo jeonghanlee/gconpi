@@ -19,9 +19,14 @@ gconpi_registerRecordDeviceDriver pdbbase
 ## Load record instances
 #dbLoadRecords("db/xxx.db","user=jhleeHost")
 
-dbLoadRecords("db/iocAdminSoft.db", "IOC=RPI:IOC")
+#dbLoadRecords("db/iocAdminSoft.db", "IOC=RPI:IOC")
 
 drvAsynSerialPortConfigure("CGONPI", "$(TTY)", 0,0,0)
+# CR, "\r" , 0x0d.
+# LF, "\n" , 0x0a
+
+asynOctetSetInputEos("CGONPI", 0, "\r\n")
+#asynOctetSetOutputEos  "L0", 0, "\r"
 
 asynSetOption("CGONPI", -1, "baud", "9600")
 asynSetOption("CGONPI", -1, "bits", "8")
@@ -36,7 +41,7 @@ dbLoadRecords("db/gconpi-stream.db", "SYSDEV=RPI:RAD1:,PORT=CGONPI")
 
 
 cd "${TOP}/iocBoot/${IOC}"
+
 iocInit
 
-## Start any sequence programs
-#seq sncxxx,"user=jhleeHost"
+dbl > "$(TOP)/${IOC}_PVs.list"

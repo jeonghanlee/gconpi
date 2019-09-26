@@ -30,7 +30,7 @@
 
 
 # EPICS_BASE should appear last so earlier modules can override stuff:
-EPICS_BASE = /home/jhlee/epics_env/epics-base
+EPICS_BASE = /home/pi/epics_env/epics-base
 ASYN=$(EPICS_BASE)/../epics-modules/asyn
 STREAM=$(EPICS_BASE)/../epics-modules/stream
 devIocStats=$(EPICS_BASE)/../epics-modules/iocStats
