@@ -1,3 +1,4 @@
+*.list
 # Object files
 *.o
 *.ko

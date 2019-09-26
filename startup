@@ -1,0 +1,1 @@
+sudo /epics/base-7.0.3/require/3.1.1/bin/iocsh.bash e3/st.cmd
