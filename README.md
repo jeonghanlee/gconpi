@@ -82,6 +82,19 @@ Battery +3V       ---------------   3.3 V PIN 1
 ### Pi setup 
 * If one may enable the serial console, the group id will be tty instead of dialout. Even if root, the connection is disconnected after few seconds. So please turn off this option via rasp-config
 
+### e3
+One needs to setup ESS EPICS Environment https://github.com/icshwi/e3
+
+```
+sudo /epics/base-7.0.3/require/3.1.1/bin/iocsh.bash e3/st.cmd
+```
+
+### StripTool
+
+```
+cd opi
+sh plot.sh
+```
 
 ### License
 * https://www.gnu.org/licenses/gpl-2.0.txt 
